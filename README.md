@@ -7,6 +7,6 @@
 4. Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 5. Launches the test runner using the `npm test` command line
 
-## libraries used 
+## External packages used 
 1. Axios 
 2. React-testing 
