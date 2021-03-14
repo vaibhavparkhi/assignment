@@ -1,0 +1,69 @@
+#signup {
+  width: 33%;
+  height: 100%;
+  border: 1px solid #d6d7da;
+  padding: 0px 15px 15px 15px;
+  border-radius: 5px;
+  font-family: arial;
+  line-height: 16px;
+  color: #333333;
+  font-size: 14px;
+  background: #2e4158;
+  margin: 100px auto;
+  box-shadow: 10px 10px #c4c3c38a
+}
+
+.form-title {
+  color:#aebfd5;
+  margin-bottom: 50px;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+
+form label{
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: white;
+  text-align: left;
+}
+
+form input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+
+.button {
+  width: 25%;
+  background-color: #ec5f6f;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.errorMsg {
+  color: lightpink;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+.sucessMsg {
+  color: #c7d3af;
+  margin-bottom: 10px;
+  text-align: left;
+}
