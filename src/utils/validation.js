@@ -20,9 +20,19 @@ export const validation = (inputs) => {
   }
   if (inputs.password.length === 0) {
     errors.password = "Please enter password!";
-  } else if (inputs && (!inputs.password || inputs.password.length < 8)) {
+  }
+  if (inputs && (!inputs.password || inputs.password.length < 8)) {
     errors.password = "Password should be greater than 8 characters!";
-  } else if (
+  }
+  if (
+    inputs &&
+    inputs.password.length > 8 &&
+    inputs.password.search(/[a-z]/) < 1 &&
+    inputs.password.search(/[A-Z]/) < 1
+  ) {
+    errors.password = "Should contain lower and uppercase letters!";
+  }
+  if (
     inputs &&
     ((inputs.firstname.length > 0 &&
       inputs.password.toLowerCase().indexOf(inputs.firstname.toLowerCase()) !==

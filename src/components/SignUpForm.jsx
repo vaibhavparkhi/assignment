@@ -11,7 +11,9 @@ const SignUpForm = () => {
     password: "",
   });
 
-  const [success, setSuccess] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [disable, setDisable] = useState(false);
 
   const [errors, setErrors] = useState({
     firstname: "",
@@ -29,24 +31,26 @@ const SignUpForm = () => {
     const validationErrors = validation(fields);
     const noErrors = Object.keys(validationErrors).length === 0;
     setErrors(validationErrors);
-    console.log(validationErrors);
+    //console.log(validationErrors);
 
     if (noErrors) {
-      setSuccess("Fetching...");
+      setMessage("Fetching...");
       const postResponse = await sendData(fields);
       if (postResponse && postResponse.status === 200) {
         setTimeout(async () => {
           const response = await getData();
           if (response.status === 200) {
-            console.log(response);
-            setSuccess("Success");
+            setMessage("Success");
+            setDisable(true);
           } else {
-            setSuccess("Error");
+            setMessage("Error");
+            setDisable(false);
           }
         }, 3000);
       }
     } else {
-      //setSuccess("All Field(s) are reuired!");
+      //setmessage("All Field(s) are reuired!");
+      setDisable(false);
     }
   };
 
@@ -55,8 +59,6 @@ const SignUpForm = () => {
    * @param {*} event
    */
   const handleChange = (event) => {
-    event.persist();
-    console.log(event.target.name);
     setFields((values) => ({
       ...values,
       [event.target.name]: event.target.value,
@@ -65,7 +67,7 @@ const SignUpForm = () => {
   return (
     <div className="App">
       <div id="signup">
-        <p className="sucessMsg">{success}</p>
+        <p className="sucessMsg">{message}</p>
         <h3 className="form-title">Sign Up Form</h3>
         <form name="signupform" onSubmit={handleSubmit}>
           <label htmlFor="firstname">First Name</label>
@@ -113,6 +115,7 @@ const SignUpForm = () => {
             className="button"
             value="Sign Up"
             data-testid="signup"
+            disabled={disable}
           />
         </form>
       </div>

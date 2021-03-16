@@ -54,6 +54,8 @@ form input {
   border-radius: 25px;
   font-size: 1.2em;
   font-weight: 500;
+  white-space: normal;
+
 }
 
 .errorMsg {
