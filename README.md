@@ -10,3 +10,8 @@
 ## External packages used 
 1. Axios 
 2. React-testing 
+
+## Change logs
+1. Added the password missing validation and ppdated test cases of passwaord validation
+2. Disabling button on success call 
+3. Removed console log  
