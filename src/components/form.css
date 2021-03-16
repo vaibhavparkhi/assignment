@@ -58,6 +58,18 @@ form input {
 
 }
 
+.button-disabled{
+  width: 25%;
+  background-color: #ec5f6f75;
+  color: #ffffff47;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: 500;
+  white-space: normal;
+}
+
 .errorMsg {
   color: lightpink;
   margin-bottom: 12px;

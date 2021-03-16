@@ -112,7 +112,7 @@ const SignUpForm = () => {
           </div>
           <input
             type="submit"
-            className="button"
+            className={disable ? "button-disabled" : "button"}
             value="Sign Up"
             data-testid="signup"
             disabled={disable}
