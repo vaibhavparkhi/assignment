@@ -12,6 +12,6 @@
 2. React-testing 
 
 ## Change logs
-1. Added the password missing validation and ppdated test cases of passwaord validation
+1. Added the password missing validation and updated test cases of passwaord validation
 2. Disabling button on success call 
 3. Removed console logs and updated code   
